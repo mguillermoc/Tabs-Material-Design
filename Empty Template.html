@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleboxV2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="cj3 imagebk">
+        <div class="header">
+              <div class="order-status">Jueves Santo</div>
+              <div class="order-date1">14 de Abril, 2022</div>
+              <div class="order-day">CICLO C</div>
+        </div>
+</div>
+<div class="cj1">
+    <div class="cj2">
+    <div id="1" class="textbox">        
+        <div class="pestana">Primera Lectura</div>
+        <div class="panel">
+            
+        </div>
+        <div class="pestana">Segunda Lectura</div>
+        <div class="panel">
+            
+         </div>
+        <div class="pestana">Evangelio</div>
+        <div class="panel">
+            
+            </div>  
+    </div>
+    <div id="2" class="textbox" style="display: none">
+                    
+    </div>    
+
+        <div id="3" class="textbox" style="display: none">
+            
+    </div>
+
+    <div id="4" class="textbox" style="display: none">
+        <div class="pestana">P. Alfredo Sáenz, S.J.</div>
+        <div class="panel">
+            
+        </div>
+        <div class="pestana">S.S. Benedicto XVI</div>
+        <div class="panel">
+            
+        </div> 
+        
+        <div class="pestana">P. Gustavo Pascual, I.V.E.</div>
+            <div class="panel">
+                
+            </div> 
+
+    </div> 
+     <div id="5" class="textbox" style="display: none">
+        
+    </div>     
+    <div id="6" class="textbox" style="display: none">
+
+    </div>
+ 
+  <!-- <div id="7" class="textbox" style="display: none">
+
+  </div> -->
+</div>
+<div class="cj4">
+    <div class="tabgen" style="margin-right: 1%" onclick="textbox('1')"><div class="iconos"><img src="https://vozcatolica.com/wp-content/uploads/images_H/Texto-liturgico.png" alt="" width="35%"></div><div class="tag1">Texto Litúrgico</div></div>
+    <div class="tabgen" style="margin-right: 1%" onclick="textbox('2')"><div class="iconos"><img src="https://vozcatolica.com/wp-content/uploads/images_H/Exegesis.png" alt="" width="35%"></div><div class="tag1">Exégesis</div></div>
+    <div class="tabgen" style="margin-right: 1%" onclick="textbox('3')"><div class="iconos"><img src="https://vozcatolica.com/wp-content/uploads/images_H/Comentario-teologico.png" alt="" width="35%"></div><div class="tag1">Comentantario teológico</div></div>
+    <div class="tabgen" style="margin-right: 1%" onclick="textbox('4')"><div class="iconos"><img src="https://vozcatolica.com/wp-content/uploads/images_H/Aplicacion-2.png" alt="" width="35%"></div><div class="tag1">Aplicación</div></div>
+    <div class="tabgen" style="margin-right: 1%" onclick="textbox('5')"><div class="iconos"><img src="https://vozcatolica.com/wp-content/uploads/images_H/santos-padres.png" alt="" width="35%"></div><div class="tag1">Santos Padres</div></div>
+    <!-- <div class="tabgen" style="margin-right: 1%" onclick="textbox('7')"><div class="iconos"><img src="https://sacerdotes.vozcatolica.com/images/aplicacion.png" alt="" width="35%"></div><div class="tag1">Ejemplos Predicables</div></div> -->
+    <div class="tabgen" onclick="textbox('6')"><div class="iconos"><img src="https://vozcatolica.com/wp-content/uploads/images_H/guion.png" alt="" width="35%"></div><div class="tag1">Guión</div></div>
+</div>
+</body>
+<script>
+    function textbox(textboxName) {
+        var i;
+        var x = document.getElementsByClassName("textbox");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(textboxName).style.display = "block";
+      }
+      var acc = document.getElementsByClassName("pestana");
+      var i;
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          /* Toggle between adding and removing the "active" class,
+          to highlight the div that controls the panel */
+          this.classList.toggle("active");
+          /* Toggle between hiding and showing the active panel */
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+</script>
+</html>
